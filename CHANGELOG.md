@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`1902cc2...main`][1902cc2...main].
+For a full diff see [`c020e6f...main`][c020e6f...main].
 
-[1902cc2...main]: https://github.com/ergebnis/json/compare/1902cc2...main
+### Added
+
+- Imported `Json` from [`ergebnis/json-normalizer`](https://github.com/ergebnis/json-normalizer/tree/3.0.0) ([#1]), by [@localheinz]
+
+[c020e6f...main]: https://github.com/ergebnis/json/compare/c020e6f...main
+
+[#1]: https://github.com/ergebnis/json/pull/1
+
+[@localheinz]: https://github.com/localheinz

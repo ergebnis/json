@@ -11,6 +11,8 @@
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/json/v/stable)](https://packagist.org/packages/ergebnis/json)
 [![Total Downloads](https://poser.pugx.org/ergebnis/json/downloads)](https://packagist.org/packages/ergebnis/json)
 
+Provides a `Json` value object for representing a valid JSON `string`.
+
 ## Installation
 
 Run
@@ -21,7 +23,42 @@ composer require ergebnis/json
 
 ## Usage
 
-:bulb: This is a great place for showing a few usage examples!
+### Create a `Json` object from `string`
+
+Create a `Json` object from a `string`:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$encoded = <<<TXT
+{
+  "foo
+TXT;
+
+$json = Json\Json::fromEncoded($encoded); // throws Json\Exception\InvalidJsonEncoded
+```
+
+Create a `Json` object from a valid JSON `string`:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$encoded = <<<JSON
+{
+  "foo": "bar"
+}
+JSON;
+
+$json = Json\Json::fromEncoded($encoded); // instance of Json\Json
+```
 
 ## Changelog
 

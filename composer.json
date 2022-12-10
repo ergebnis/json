@@ -1,8 +1,11 @@
 {
   "name": "ergebnis/json",
-  "description": "Provides a GitHub repository template for a PHP library, using GitHub Actions.",
+  "description": "Provides a Json value object for representing a valid JSON string.",
   "license": "MIT",
   "type": "library",
+  "keywords": [
+    "json"
+  ],
   "authors": [
     {
       "name": "Andreas Möller",
