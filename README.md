@@ -39,7 +39,7 @@ $encoded = <<<TXT
   "foo
 TXT;
 
-$json = Json\Json::fromEncoded($encoded); // throws Json\Exception\InvalidJsonEncoded
+$json = Json\Json::fromString($encoded); // throws Json\Exception\NotJson
 ```
 
 Create a `Json` object from a valid JSON `string`:
@@ -57,7 +57,57 @@ $encoded = <<<JSON
 }
 JSON;
 
-$json = Json\Json::fromEncoded($encoded); // instance of Json\Json
+$json = Json\Json::fromString($encoded); // instance of Json\Json
+```
+
+### Create a `Json` object from a file
+
+Create a `Json` object from a file that does not exist:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$json = Json\Json::fromFile(__DIR__ . '/does-not-exist.json'); // throws Json\Exception\FileDoesNotExist
+```
+
+Create a `Json` object from a file that can not be read:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$json = Json\Json::fromFile(__DIR__ . '/can-not-be-read.json'); // throws Json\Exception\FileCanNotBeRead
+```
+
+Create a `Json` object from a file that does not contain a valid JSON `string`:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$json = Json\Json::fromFile(__DIR__ . '/README.MD'); // throws Json\Exception\FileDoesNotContainJson
+```
+
+Create a `Json` object from a file that contains a valid JSON `string`:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use Ergebnis\Json;
+
+$json = Json\Json::fromFile(__DIR__ . '/contains-json.json'); // instance of Json\Json
 ```
 
 ## Changelog

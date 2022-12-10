@@ -20,31 +20,23 @@ use PHPUnit\Framework;
 /**
  * @internal
  *
- * @covers \Ergebnis\Json\Exception\InvalidJsonEncoded
+ * @covers \Ergebnis\Json\Exception\NotJson
  */
-final class InvalidJsonEncodedTest extends Framework\TestCase
+final class NotJsonTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    public function testDefaults(): void
-    {
-        $exception = new Exception\InvalidJsonEncoded();
-
-        self::assertSame('', $exception->encoded());
-    }
-
-    public function testFromEncodedReturnsInvalidJsonEncodedException(): void
+    public function testValueReturnsException(): void
     {
         $encoded = self::faker()->sentence();
 
-        $exception = Exception\InvalidJsonEncoded::fromEncoded($encoded);
+        $exception = Exception\NotJson::value($encoded);
 
         $message = \sprintf(
-            '"%s" is not valid JSON.',
+            'Value "%s" is not a valid JSON string.',
             $encoded,
         );
 
         self::assertSame($message, $exception->getMessage());
-        self::assertSame($encoded, $exception->encoded());
     }
 }

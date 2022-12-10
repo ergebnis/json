@@ -23,58 +23,72 @@ use PHPUnit\Framework;
  *
  * @covers \Ergebnis\Json\Json
  *
- * @uses \Ergebnis\Json\Exception\InvalidJsonEncoded
+ * @uses \Ergebnis\Json\Exception\FileDoesNotContainJson
+ * @uses \Ergebnis\Json\Exception\FileDoesNotExist
+ * @uses \Ergebnis\Json\Exception\NotJson
  */
 final class JsonTest extends Framework\TestCase
 {
     use Test\Util\Helper;
 
-    public function testFromEncodedRejectsInvalidEncoded(): void
+    public function testFromStringThrowsWhenValueIsNotJson(): void
     {
-        $encoded = self::faker()->realText();
+        $encoded = <<<'TXT'
+{
+  "foo
+TXT;
 
-        $this->expectException(Exception\InvalidJsonEncoded::class);
+        $this->expectException(Exception\NotJson::class);
 
-        Json::fromEncoded($encoded);
+        Json::fromString($encoded);
     }
 
     /**
-     * @dataProvider provideEncoded
+     * @dataProvider \Ergebnis\Json\Test\DataProvider\JsonProvider::validString()
      */
-    public function testFromEncodedReturnsJson(string $encoded): void
+    public function testFromStringReturnsJsonWhenValueIsValidJson(string $encoded): void
     {
-        $json = Json::fromEncoded($encoded);
+        $json = Json::fromString($encoded);
 
         self::assertSame($encoded, $json->toString());
         self::assertSame($encoded, $json->encoded());
-        self::assertSame($encoded, \json_encode($json->decoded()));
+        self::assertJsonStringEqualsJsonString($encoded, \json_encode($json->decoded()));
+    }
+
+    public function testFromFileThrowsWhenFileDoesNotExist(): void
+    {
+        $file = __DIR__ . '/../Fixture/Json/does-not-exist.json';
+
+        $this->expectException(Exception\FileDoesNotExist::class);
+
+        Json::fromFile($file);
+    }
+
+    public function testFromFileThrowsWhenFileIsADirectory(): void
+    {
+        $file = __DIR__ . '/../Fixture/Json';
+
+        $this->expectException(Exception\FileDoesNotExist::class);
+
+        Json::fromFile($file);
+    }
+
+    public function testFromFileThrowsWhenFileDoesNotContainValidJson(): void
+    {
+        $file = __DIR__ . '/../Fixture/Json/not-valid/object.json';
+
+        $this->expectException(Exception\FileDoesNotContainJson::class);
+
+        Json::fromFile($file);
     }
 
     /**
-     * @return \Generator<string, array{0: null|array|bool|float|int|string}>
+     * @dataProvider \Ergebnis\Json\Test\DataProvider\JsonProvider::validFile()
      */
-    public function provideEncoded(): \Generator
+    public function testFromFileReturnsJsonWhenFileContainsValidJson(string $file): void
     {
-        $values = [
-            'array-indexed' => [
-                'foo',
-                'bar',
-            ],
-            'array-associative' => [
-                'foo' => 'bar',
-            ],
-            'bool-false' => false,
-            'bool-true' => true,
-            'float' => 3.14,
-            'int' => 9000,
-            'null' => null,
-            'string' => 'foo',
-        ];
+        $json = Json::fromFile($file);
 
-        foreach ($values as $key => $value) {
-            yield $key => [
-                \json_encode($value),
-            ];
-        }
+        self::assertStringEqualsFile($file, $json->toString());
     }
 }
