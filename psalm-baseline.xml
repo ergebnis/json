@@ -16,4 +16,10 @@
       <code>\Generator&lt;string, array{0: string}&gt;</code>
     </MoreSpecificReturnType>
   </file>
+  <file src="test/Unit/JsonTest.php">
+    <MixedAssignment occurrences="2">
+      <code>$decoded</code>
+      <code>$decoded</code>
+    </MixedAssignment>
+  </file>
 </files>

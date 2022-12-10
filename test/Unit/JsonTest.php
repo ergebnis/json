@@ -52,7 +52,15 @@ TXT;
 
         self::assertSame($encoded, $json->toString());
         self::assertSame($encoded, $json->encoded());
-        self::assertJsonStringEqualsJsonString($encoded, \json_encode($json->decoded()));
+
+        $decoded = \json_decode(
+            $encoded,
+            false,
+            512,
+            \JSON_THROW_ON_ERROR,
+        );
+
+        self::assertEquals($decoded, $json->decoded());
     }
 
     public function testFromFileThrowsWhenFileDoesNotExist(): void
@@ -90,5 +98,15 @@ TXT;
         $json = Json::fromFile($file);
 
         self::assertStringEqualsFile($file, $json->toString());
+        self::assertStringEqualsFile($file, $json->encoded());
+
+        $decoded = \json_decode(
+            \file_get_contents($file),
+            false,
+            512,
+            \JSON_THROW_ON_ERROR,
+        );
+
+        self::assertEquals($decoded, $json->decoded());
     }
 }
