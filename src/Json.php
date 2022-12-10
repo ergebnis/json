@@ -69,7 +69,7 @@ final class Json
         try {
             $decoded = \json_decode(
                 $encoded,
-                true,
+                false,
                 512,
                 \JSON_THROW_ON_ERROR,
             );
