@@ -28,9 +28,9 @@ final class Json
     }
 
     /**
-     * @throws Exception\InvalidJsonEncoded
+     * @throws Exception\NotJson
      */
-    public static function fromEncoded(string $encoded): self
+    public static function fromString(string $encoded): self
     {
         try {
             $decoded = \json_decode(
@@ -40,7 +40,41 @@ final class Json
                 \JSON_THROW_ON_ERROR,
             );
         } catch (\JsonException) {
-            throw Exception\InvalidJsonEncoded::fromEncoded($encoded);
+            throw Exception\NotJson::value($encoded);
+        }
+
+        return new self(
+            $encoded,
+            $decoded,
+        );
+    }
+
+    /**
+     * @throws Exception\FileCanNotBeRead
+     * @throws Exception\FileDoesNotContainJson
+     * @throws Exception\FileDoesNotExist
+     */
+    public static function fromFile(string $file): self
+    {
+        if (!\is_file($file)) {
+            throw Exception\FileDoesNotExist::file($file);
+        }
+
+        $encoded = \file_get_contents($file);
+
+        if (!\is_string($encoded)) {
+            throw Exception\FileCanNotBeRead::file($file);
+        }
+
+        try {
+            $decoded = \json_decode(
+                $encoded,
+                true,
+                512,
+                \JSON_THROW_ON_ERROR,
+            );
+        } catch (\JsonException) {
+            throw Exception\FileDoesNotContainJson::file($file);
         }
 
         return new self(

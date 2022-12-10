@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.1.0@4defa177c89397c5e14737a80fe4896584130674">
   <file src="src/Json.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument occurrences="2">
+      <code>$decoded</code>
       <code>$decoded</code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
+    <MixedAssignment occurrences="2">
+      <code>$decoded</code>
       <code>$decoded</code>
     </MixedAssignment>
   </file>
-  <file src="test/Unit/JsonTest.php">
-    <InvalidArgument occurrences="1">
-      <code>testFromEncodedReturnsJson</code>
-    </InvalidArgument>
+  <file src="test/DataProvider/JsonProvider.php">
+    <MoreSpecificReturnType occurrences="2">
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+      <code>\Generator&lt;string, array{0: string}&gt;</code>
+    </MoreSpecificReturnType>
   </file>
 </files>
