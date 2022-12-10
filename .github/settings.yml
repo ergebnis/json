@@ -92,4 +92,4 @@ repository:
 
   # https://docs.github.com/en/rest/reference/repos#replace-all-repository-topics
 
-  topics: "php, package, template"
+  topics: "json"
