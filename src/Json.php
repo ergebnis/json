@@ -33,12 +33,7 @@ final class Json
     public static function fromString(string $encoded): self
     {
         try {
-            $decoded = \json_decode(
-                $encoded,
-                false,
-                512,
-                \JSON_THROW_ON_ERROR,
-            );
+            $decoded = self::decode($encoded);
         } catch (\JsonException) {
             throw Exception\NotJson::value($encoded);
         }
@@ -67,12 +62,7 @@ final class Json
         }
 
         try {
-            $decoded = \json_decode(
-                $encoded,
-                false,
-                512,
-                \JSON_THROW_ON_ERROR,
-            );
+            $decoded = self::decode($encoded);
         } catch (\JsonException) {
             throw Exception\FileDoesNotContainJson::file($file);
         }
@@ -107,5 +97,18 @@ final class Json
     public function toString(): string
     {
         return $this->encoded;
+    }
+
+    /**
+     * @throws \JsonException
+     */
+    private static function decode(string $encoded): mixed
+    {
+        return \json_decode(
+            $encoded,
+            false,
+            512,
+            \JSON_THROW_ON_ERROR,
+        );
     }
 }
