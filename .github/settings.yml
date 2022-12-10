@@ -79,7 +79,7 @@ repository:
   archived: false
   default_branch: "main"
   delete_branch_on_merge: true
-  description: ":octocat: + :ledger: Provides a GitHub repository template for a PHP package, using GitHub Actions."
+  description: ":page_with_curl: Provides a Json value object for representing a valid JSON string."
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
   has_downloads: true
