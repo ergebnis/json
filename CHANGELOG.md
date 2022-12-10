@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.0.0...main`][1.0.0...main].
 
+### Fixed
+
+- Decoded JSON `string` to an object, not an associative array, when constructing `Json` from file name ([#3]), by [@localheinz]
+
 ## [`1.0.0`][1.0.0]
 
 For a full diff see [`c020e6f...1.0.0`][c020e6f...1.0.0].
@@ -24,5 +28,6 @@ For a full diff see [`c020e6f...1.0.0`][c020e6f...1.0.0].
 
 [#1]: https://github.com/ergebnis/json/pull/1
 [#2]: https://github.com/ergebnis/json/pull/2
+[#3]: https://github.com/ergebnis/json/pull/3
 
 [@localheinz]: https://github.com/localheinz
