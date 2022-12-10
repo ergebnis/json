@@ -1,0 +1,60 @@
+{
+  "name": "ergebnis/json",
+  "description": "Provides a GitHub repository template for a PHP library, using GitHub Actions.",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Andreas Möller",
+      "email": "am@localheinz.com"
+    }
+  ],
+  "homepage": "https://github.com/ergebnis/json",
+  "support": {
+    "issues": "https://github.com/ergebnis/json/issues",
+    "source": "https://github.com/ergebnis/json"
+  },
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.29.0",
+    "ergebnis/data-provider": "^1.2.0",
+    "ergebnis/license": "^2.1.0",
+    "ergebnis/php-cs-fixer-config": "^5.0.0",
+    "ergebnis/phpstan-rules": "^1.0.0",
+    "fakerphp/faker": "^1.20.0",
+    "infection/infection": "~0.26.16",
+    "phpunit/phpunit": "^9.5.27",
+    "psalm/plugin-phpunit": "~0.18.4",
+    "vimeo/psalm": "^5.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ergebnis\\Json\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ergebnis\\Json\\Test\\": "test/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "ergebnis/composer-normalize": true,
+      "infection/extension-installer": true
+    },
+    "platform": {
+      "php": "8.0.25"
+    },
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "composer-normalize": {
+      "indent-size": 2,
+      "indent-style": "space"
+    }
+  }
+}
