@@ -19,7 +19,7 @@ namespace Ergebnis\Json;
 final class Json
 {
     /**
-     * @param null|array<mixed>|bool|float|int|object|string $decoded
+     * @param null|array<int, mixed>|bool|float|int|object|string $decoded
      */
     private function __construct(
         private string $encoded,
@@ -76,7 +76,7 @@ final class Json
     /**
      * Returns the decoded JSON value.
      *
-     * @return null|array<mixed>|bool|float|int|object|string
+     * @return null|array<int, mixed>|bool|float|int|object|string
      */
     public function decoded()
     {
