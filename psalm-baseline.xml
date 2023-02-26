@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.1.0@4defa177c89397c5e14737a80fe4896584130674">
+<files psalm-version="5.7.5@5390c212bab06ee230c8720c2e9c54b823db00c8">
   <file src="src/Json.php">
-    <MixedArgument occurrences="2">
+    <MixedArgument>
       <code>$decoded</code>
       <code>$decoded</code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
+    <MixedAssignment>
       <code>$decoded</code>
       <code>$decoded</code>
     </MixedAssignment>
   </file>
   <file src="test/DataProvider/JsonProvider.php">
-    <MoreSpecificReturnType occurrences="2">
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
-      <code>\Generator&lt;string, array{0: string}&gt;</code>
+    <MoreSpecificReturnType>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
+      <code><![CDATA[\Generator<string, array{0: string}>]]></code>
     </MoreSpecificReturnType>
   </file>
   <file src="test/Unit/JsonTest.php">
-    <MixedAssignment occurrences="2">
+    <MixedAssignment>
       <code>$decoded</code>
       <code>$decoded</code>
     </MixedAssignment>
