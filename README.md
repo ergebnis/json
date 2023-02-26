@@ -1,7 +1,7 @@
 # json
 
 [![Integrate](https://github.com/ergebnis/json/workflows/Integrate/badge.svg)](https://github.com/ergebnis/json/actions)
-[![Prune](https://github.com/ergebnis/json/workflows/Prune/badge.svg)](https://github.com/ergebnis/json/actions)
+[![Merge](https://github.com/ergebnis/json/workflows/Merge/badge.svg)](https://github.com/ergebnis/json/actions)
 [![Release](https://github.com/ergebnis/json/workflows/Release/badge.svg)](https://github.com/ergebnis/json/actions)
 [![Renew](https://github.com/ergebnis/json/workflows/Renew/badge.svg)](https://github.com/ergebnis/json/actions)
 
@@ -10,6 +10,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/json/v/stable)](https://packagist.org/packages/ergebnis/json)
 [![Total Downloads](https://poser.pugx.org/ergebnis/json/downloads)](https://packagist.org/packages/ergebnis/json)
+[![Monthly Downloads](http://poser.pugx.org/ergebnis/json/d/monthly)](https://packagist.org/packages/ergebnis/json)
 
 Provides a `Json` value object for representing a valid JSON `string`.
 
@@ -130,4 +131,4 @@ Please have a look at [`LICENSE.md`](LICENSE.md).
 
 ## Curious what I am up to?
 
-Follow me on [Twitter](https://twitter.com/localheinz)!
+Follow me on [Twitter](https://twitter.com/intent/follow?screen_name=localheinz)!

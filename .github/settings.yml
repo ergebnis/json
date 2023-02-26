@@ -18,6 +18,7 @@ branches:
           - context: "Coding Standards (8.0, locked)"
           - context: "Dependency Analysis (8.0, locked)"
           - context: "Mutation Tests (8.0, locked)"
+          - context: "Refactoring (8.0, locked)"
           - context: "Security Analysis (8.0, locked)"
           - context: "Static Code Analysis (8.0, locked)"
           - context: "Tests (8.0, highest)"
@@ -64,10 +65,6 @@ labels:
 
   - name: "security"
     color: "ee0701"
-    description: ""
-
-  - name: "stale"
-    color: "eeeeee"
     description: ""
 
 # https://docs.github.com/en/rest/reference/repos#update-a-repository
