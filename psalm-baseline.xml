@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.7.5@5390c212bab06ee230c8720c2e9c54b823db00c8">
+<files psalm-version="5.11.0@c9b192ab8400fdaf04b2b13d110575adc879aa90">
   <file src="src/Json.php">
     <MixedArgument>
       <code>$decoded</code>
@@ -11,10 +11,10 @@
     </MixedAssignment>
   </file>
   <file src="test/DataProvider/JsonProvider.php">
-    <MoreSpecificReturnType>
+    <MixedReturnTypeCoercion>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
-    </MoreSpecificReturnType>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="test/Unit/JsonTest.php">
     <MixedAssignment>
