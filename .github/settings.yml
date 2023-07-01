@@ -76,11 +76,13 @@ repository:
   description: ":page_with_curl: Provides a Json value object for representing a valid JSON string."
   enable_automated_security_fixes: true
   enable_vulnerability_alerts: true
+  has_discussions: false
   has_downloads: true
   has_issues: true
   has_pages: false
   has_projects: false
   has_wiki: false
+  is_template: false
   name: "json"
   private: false
 
