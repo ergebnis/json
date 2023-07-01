@@ -39,7 +39,7 @@ final class JsonProvider extends DataProvider\AbstractProvider
     /**
      * @return \Generator<string, array{0: string}>
      */
-    public function validFile(): \Generator
+    public static function validFile(): \Generator
     {
         yield from self::provideDataForValues(self::filesContainingValidJson());
     }
