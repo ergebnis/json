@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dad7da21d977e301fc4c1c607b7805f5",
+    "content-hash": "554b6cd518fae225f43dac1ca32ff23a",
     "packages": [],
     "packages-dev": [
         {
@@ -1022,21 +1022,21 @@
         },
         {
             "name": "ergebnis/php-cs-fixer-config",
-            "version": "5.14.1",
+            "version": "5.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/php-cs-fixer-config.git",
-                "reference": "41bd611a05932a304dda2219c7fe22b9d515cff4"
+                "reference": "18a86f13db2764b9f343ddb5a817784000d653ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/41bd611a05932a304dda2219c7fe22b9d515cff4",
-                "reference": "41bd611a05932a304dda2219c7fe22b9d515cff4",
+                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/18a86f13db2764b9f343ddb5a817784000d653ee",
+                "reference": "18a86f13db2764b9f343ddb5a817784000d653ee",
                 "shasum": ""
             },
             "require": {
                 "ext-filter": "*",
-                "friendsofphp/php-cs-fixer": "~3.25.0",
+                "friendsofphp/php-cs-fixer": "~3.25.1",
                 "php": "~8.1.0 || ~8.2.0"
             },
             "require-dev": {
@@ -1080,7 +1080,7 @@
                 "issues": "https://github.com/ergebnis/php-cs-fixer-config/issues",
                 "source": "https://github.com/ergebnis/php-cs-fixer-config"
             },
-            "time": "2023-09-01T07:47:34+00:00"
+            "time": "2023-09-04T10:05:22+00:00"
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
