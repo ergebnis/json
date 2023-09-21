@@ -16,7 +16,8 @@
   "homepage": "https://github.com/ergebnis/json",
   "support": {
     "issues": "https://github.com/ergebnis/json/issues",
-    "source": "https://github.com/ergebnis/json"
+    "source": "https://github.com/ergebnis/json",
+    "security": "https://github.com/ergebnis/json/blob/main/.github/SECURITY.md"
   },
   "require": {
     "php": "~8.1.0 || ~8.2.0"
