@@ -12,7 +12,7 @@
 [![Total Downloads](https://poser.pugx.org/ergebnis/json/downloads)](https://packagist.org/packages/ergebnis/json)
 [![Monthly Downloads](http://poser.pugx.org/ergebnis/json/d/monthly)](https://packagist.org/packages/ergebnis/json)
 
-Provides a `Json` value object for representing a valid JSON `string`.
+This package provides a `Json` value object for representing a valid JSON `string`.
 
 ## Installation
 
