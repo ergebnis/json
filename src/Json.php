@@ -18,13 +18,18 @@ namespace Ergebnis\Json;
  */
 final class Json
 {
+    private string $encoded;
+    private $decoded;
+
     /**
      * @param null|array<int, mixed>|bool|float|int|object|string $decoded
      */
     private function __construct(
-        private string $encoded,
-        private $decoded,
+        string $encoded,
+        $decoded
     ) {
+        $this->decoded = $decoded;
+        $this->encoded = $encoded;
     }
 
     /**
@@ -34,7 +39,7 @@ final class Json
     {
         try {
             $decoded = self::decode($encoded);
-        } catch (\JsonException) {
+        } catch (\JsonException $exception) {
             throw Exception\NotJson::value($encoded);
         }
 
@@ -63,7 +68,7 @@ final class Json
 
         try {
             $decoded = self::decode($encoded);
-        } catch (\JsonException) {
+        } catch (\JsonException $exception) {
             throw Exception\FileDoesNotContainJson::file($file);
         }
 
@@ -102,7 +107,7 @@ final class Json
     /**
      * @throws \JsonException
      */
-    private static function decode(string $encoded): mixed
+    private static function decode(string $encoded)
     {
         return \json_decode(
             $encoded,

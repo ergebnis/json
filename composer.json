@@ -20,19 +20,20 @@
     "security": "https://github.com/ergebnis/json/blob/main/.github/SECURITY.md"
   },
   "require": {
-    "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+    "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+    "ext-json": "*"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.29.0",
+    "ergebnis/composer-normalize": "^2.28.3",
     "ergebnis/data-provider": "^3.2.0",
     "ergebnis/license": "^2.4.0",
     "ergebnis/php-cs-fixer-config": "^6.13.1",
     "ergebnis/phpunit-slow-test-detector": "^2.7.0",
     "fakerphp/faker": "^1.23.0",
-    "infection/infection": "~0.26.19",
-    "phpunit/phpunit": "^9.6.13",
+    "infection/infection": "~0.26.6",
+    "phpunit/phpunit": "^9.6.15",
     "psalm/plugin-phpunit": "~0.18.4",
-    "rector/rector": "~0.18.12",
+    "rector/rector": "~0.18.12.",
     "vimeo/psalm": "^5.17.0"
   },
   "autoload": {
@@ -48,8 +49,8 @@
   "config": {
     "allow-plugins": {
       "composer/package-versions-deprecated": true,
-      "ergebnis/composer-normalize": true,
-      "infection/extension-installer": true
+      "infection/extension-installer": true,
+      "ergebnis/composer-normalize": true
     },
     "audit": {
       "abandoned": "report"

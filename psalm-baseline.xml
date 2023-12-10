@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.17.0@c620f6e80d0abfca532b00bda366062aaedf6e5d">
   <file src="src/Json.php">
+    <MissingPropertyType>
+      <code>$decoded</code>
+    </MissingPropertyType>
+    <MissingReturnType>
+      <code>decode</code>
+    </MissingReturnType>
     <MixedArgument>
       <code>$decoded</code>
       <code>$decoded</code>
@@ -9,6 +15,12 @@
       <code>$decoded</code>
       <code>$decoded</code>
     </MixedAssignment>
+    <MixedInferredReturnType>
+      <code><![CDATA[null|array<int, mixed>|bool|float|int|object|string]]></code>
+    </MixedInferredReturnType>
+    <MixedReturnStatement>
+      <code><![CDATA[$this->decoded]]></code>
+    </MixedReturnStatement>
   </file>
   <file src="test/DataProvider/JsonProvider.php">
     <MixedReturnTypeCoercion>
