@@ -18,10 +18,13 @@ use Ergebnis\Json\Json;
 use Ergebnis\Json\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Json::class)]
-#[Framework\Attributes\UsesClass(Exception\FileDoesNotContainJson::class)]
-#[Framework\Attributes\UsesClass(Exception\FileDoesNotExist::class)]
-#[Framework\Attributes\UsesClass(Exception\NotJson::class)]
+/**
+ * @covers \Ergebnis\Json\Json
+ *
+ * @uses \Ergebnis\Json\Exception\FileDoesNotContainJson
+ * @uses \Ergebnis\Json\Exception\FileDoesNotExist
+ * @uses \Ergebnis\Json\Exception\NotJson
+ */
 final class JsonTest extends Framework\TestCase
 {
     use Test\Util\Helper;
@@ -38,7 +41,9 @@ TXT;
         Json::fromString($encoded);
     }
 
-    #[Framework\Attributes\DataProviderExternal(Test\DataProvider\JsonProvider::class, 'validString')]
+    /**
+     * @dataProvider \Ergebnis\Json\Test\DataProvider\JsonProvider::validString()
+     */
     public function testFromStringReturnsJsonWhenValueIsValidJson(string $encoded): void
     {
         $json = Json::fromString($encoded);
@@ -83,7 +88,9 @@ TXT;
         Json::fromFile($file);
     }
 
-    #[Framework\Attributes\DataProviderExternal(Test\DataProvider\JsonProvider::class, 'validFile')]
+    /**
+     * @dataProvider \Ergebnis\Json\Test\DataProvider\JsonProvider::validFile()
+     */
     public function testFromFileReturnsJsonWhenFileContainsValidJson(string $file): void
     {
         $json = Json::fromFile($file);

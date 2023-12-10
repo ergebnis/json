@@ -17,7 +17,9 @@ use Ergebnis\Json\Exception;
 use Ergebnis\Json\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\FileCanNotBeRead::class)]
+/**
+ * @covers \Ergebnis\Json\Exception\FileCanNotBeRead
+ */
 final class FileCanNotBeReadTest extends Framework\TestCase
 {
     use Test\Util\Helper;
