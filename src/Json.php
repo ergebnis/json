@@ -22,7 +22,7 @@ final class Json
      * @param null|array<int, mixed>|bool|float|int|object|string $decoded
      */
     private function __construct(
-        private readonly string $encoded,
+        private string $encoded,
         private $decoded,
     ) {
     }
