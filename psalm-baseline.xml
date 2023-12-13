@@ -15,6 +15,10 @@
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
       <code><![CDATA[\Generator<string, array{0: string}>]]></code>
     </MixedReturnTypeCoercion>
+    <PossiblyUnusedMethod>
+      <code>validFile</code>
+      <code>validString</code>
+    </PossiblyUnusedMethod>
   </file>
   <file src="test/Unit/JsonTest.php">
     <MixedAssignment>

@@ -17,9 +17,7 @@ use Ergebnis\Json\Exception;
 use Ergebnis\Json\Test;
 use PHPUnit\Framework;
 
-/**
- * @covers \Ergebnis\Json\Exception\NotJson
- */
+#[Framework\Attributes\CoversClass(Exception\NotJson::class)]
 final class NotJsonTest extends Framework\TestCase
 {
     use Test\Util\Helper;
