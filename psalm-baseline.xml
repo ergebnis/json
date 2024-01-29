@@ -9,6 +9,9 @@
       <code>$decoded</code>
       <code>$decoded</code>
     </MixedAssignment>
+    <PropertyTypeCoercion>
+      <code>$decoded</code>
+    </PropertyTypeCoercion>
   </file>
   <file src="test/DataProvider/JsonProvider.php">
     <MixedReturnTypeCoercion>
