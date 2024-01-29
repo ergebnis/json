@@ -11,6 +11,7 @@ For a full diff see [`1.1.0...main`][1.1.0...main].
 ### Changed
 
 - Added support for PHP 8.0 ([#226]), by [@localheinz]
+- Added support for PHP 7.4 ([#227]), by [@localheinz]
 
 ## [`1.1.0`][1.1.0]
 
@@ -53,5 +54,6 @@ For a full diff see [`c020e6f...1.0.0`][c020e6f...1.0.0].
 [#90]: https://github.com/ergebnis/json/pull/90
 [#151]: https://github.com/ergebnis/json/pull/151
 [#226]: https://github.com/ergebnis/json/pull/226
+[#227]: https://github.com/ergebnis/json/pull/227
 
 [@localheinz]: https://github.com/localheinz
