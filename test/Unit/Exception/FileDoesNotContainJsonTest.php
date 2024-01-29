@@ -17,7 +17,9 @@ use Ergebnis\Json\Exception;
 use Ergebnis\Json\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\FileDoesNotContainJson::class)]
+/**
+ * @covers \Ergebnis\Json\Exception\FileDoesNotContainJson
+ */
 final class FileDoesNotContainJsonTest extends Framework\TestCase
 {
     use Test\Util\Helper;

@@ -17,7 +17,9 @@ use Ergebnis\Json\Exception;
 use Ergebnis\Json\Test;
 use PHPUnit\Framework;
 
-#[Framework\Attributes\CoversClass(Exception\FileDoesNotExist::class)]
+/**
+ * @covers \Ergebnis\Json\Exception\FileDoesNotExist
+ */
 final class FileDoesNotExistTest extends Framework\TestCase
 {
     use Test\Util\Helper;
