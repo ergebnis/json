@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a0969abd599bce32bfa1fa42586e9da",
+    "content-hash": "a29dbd5b18755daca473dbf63b5eb465",
     "packages": [],
     "packages-dev": [
         {
@@ -810,21 +810,21 @@
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
-            "version": "2.13.0",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/phpunit-slow-test-detector.git",
-                "reference": "f192ad8327f372ddce7bc1760bbf74b5181a7b2e"
+                "reference": "9138b0ebffdd2c579eb4b0567ef3bef8c714fdc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/f192ad8327f372ddce7bc1760bbf74b5181a7b2e",
-                "reference": "f192ad8327f372ddce7bc1760bbf74b5181a7b2e",
+                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/9138b0ebffdd2c579eb4b0567ef3bef8c714fdc2",
+                "reference": "9138b0ebffdd2c579eb4b0567ef3bef8c714fdc2",
                 "shasum": ""
             },
             "require": {
-                "php": "~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-                "phpunit/phpunit": "^7.5.0 || ^8.5.19 || ^9.0.0 || ^10.0.0 || ^11.0.0"
+                "php": "~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+                "phpunit/phpunit": "^6.5.0 || ^7.5.0 || ^8.5.19 || ^9.0.0 || ^10.0.0 || ^11.0.0"
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.42.0",
@@ -873,7 +873,7 @@
                 "security": "https://github.com/ergebnis/phpunit-slow-test-detector/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/phpunit-slow-test-detector"
             },
-            "time": "2024-04-07T16:39:57+00:00"
+            "time": "2024-04-08T06:35:34+00:00"
         },
         {
             "name": "erickskrauch/php-cs-fixer-custom-fixers",
