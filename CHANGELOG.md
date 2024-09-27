@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`1.2.0...main`][1.2.0...main].
 
+### Changed
+
+- Allowed installation of PHP 8.4 ([#318]), by [@localheinz]
+
 ## [`1.2.0`][1.2.0]
 
 For a full diff see [`1.1.0...1.2.0`][1.1.0..1.2.0].
@@ -61,5 +65,6 @@ For a full diff see [`c020e6f...1.0.0`][c020e6f...1.0.0].
 [#151]: https://github.com/ergebnis/json/pull/151
 [#226]: https://github.com/ergebnis/json/pull/226
 [#227]: https://github.com/ergebnis/json/pull/227
+[#318]: https://github.com/ergebnis/json/pull/318
 
 [@localheinz]: https://github.com/localheinz
