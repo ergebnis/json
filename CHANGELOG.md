@@ -10,7 +10,7 @@ For a full diff see [`1.3.0...main`][1.3.0...main].
 
 ## [`1.3.0`][1.3.0]
 
-For a full diff see [`1.2.0...1.3.0`][1.2.0..1.3.0].
+For a full diff see [`1.2.0...1.3.0`][1.2.0...1.3.0].
 
 ### Changed
 
@@ -18,7 +18,7 @@ For a full diff see [`1.2.0...1.3.0`][1.2.0..1.3.0].
 
 ## [`1.2.0`][1.2.0]
 
-For a full diff see [`1.1.0...1.2.0`][1.1.0..1.2.0].
+For a full diff see [`1.1.0...1.2.0`][1.1.0...1.2.0].
 
 ### Changed
 
