@@ -1,0 +1,17 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#2 \\$decoded of class Ergebnis\\\\Json\\\\Json constructor expects array\\<int, mixed\\>\\|bool\\|float\\|int\\|object\\|string\\|null, mixed given\\.$#"
+			count: 2
+			path: src/Json.php
+
+		-
+			message: "#^Generator expects value type array\\{string\\}, array\\{mixed\\} given\\.$#"
+			count: 2
+			path: test/DataProvider/JsonProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, string\\|false given\\.$#"
+			count: 1
+			path: test/Unit/JsonTest.php
+
