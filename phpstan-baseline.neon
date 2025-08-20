@@ -1,40 +1,10 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Class "Ergebnis\\Json\\Exception\\FileCanNotBeRead" is not allowed to extend "InvalidArgumentException"\.$#'
-			identifier: ergebnis.noExtends
-			count: 1
-			path: src/Exception/FileCanNotBeRead.php
-
-		-
-			message: '#^Class "Ergebnis\\Json\\Exception\\FileDoesNotContainJson" is not allowed to extend "InvalidArgumentException"\.$#'
-			identifier: ergebnis.noExtends
-			count: 1
-			path: src/Exception/FileDoesNotContainJson.php
-
-		-
-			message: '#^Class "Ergebnis\\Json\\Exception\\FileDoesNotExist" is not allowed to extend "InvalidArgumentException"\.$#'
-			identifier: ergebnis.noExtends
-			count: 1
-			path: src/Exception/FileDoesNotExist.php
-
-		-
-			message: '#^Class "Ergebnis\\Json\\Exception\\NotJson" is not allowed to extend "InvalidArgumentException"\.$#'
-			identifier: ergebnis.noExtends
-			count: 1
-			path: src/Exception/NotJson.php
-
-		-
 			message: '#^Parameter \#2 \$decoded of class Ergebnis\\Json\\Json constructor expects array\<int, mixed\>\|bool\|float\|int\|object\|string\|null, mixed given\.$#'
 			identifier: argument.type
 			count: 2
 			path: src/Json.php
-
-		-
-			message: '#^Class "Ergebnis\\Json\\Test\\DataProvider\\JsonProvider" is not allowed to extend "Ergebnis\\DataProvider\\AbstractProvider"\.$#'
-			identifier: ergebnis.noExtends
-			count: 1
-			path: test/DataProvider/JsonProvider.php
 
 		-
 			message: '#^Generator expects value type array\{string\}, array\{mixed\} given\.$#'

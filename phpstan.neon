@@ -2,6 +2,12 @@ includes:
 	- phpstan-baseline.neon
 
 parameters:
+	ergebnis:
+		noExtends:
+			classesAllowedToBeExtended:
+				- Ergebnis\DataProvider\AbstractProvider
+				- InvalidArgumentException
+
 	inferPrivatePropertyTypeFromConstructor: true
 
 	level: max
