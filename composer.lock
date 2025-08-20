@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5022876fe8681901eb1d908555035dd",
+    "content-hash": "d5e31edfd77f8b275db7d391f5726dc7",
     "packages": [],
     "packages-dev": [
         {
@@ -909,6 +909,80 @@
                 "source": "https://github.com/ergebnis/php-cs-fixer-config"
             },
             "time": "2024-09-27T15:41:26+00:00"
+        },
+        {
+            "name": "ergebnis/phpstan-rules",
+            "version": "2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ergebnis/phpstan-rules.git",
+                "reference": "505fead92d89daeb6aa045e92a3e77b55f4ca6a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ergebnis/phpstan-rules/zipball/505fead92d89daeb6aa045e92a3e77b55f4ca6a5",
+                "reference": "505fead92d89daeb6aa045e92a3e77b55f4ca6a5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0",
+                "phpstan/phpstan": "^2.1.8"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0.0 || ^5.0.0",
+                "doctrine/orm": "^2.20.0 || ^3.3.0",
+                "ergebnis/composer-normalize": "^2.47.0",
+                "ergebnis/license": "^2.6.0",
+                "ergebnis/php-cs-fixer-config": "^6.52.0",
+                "ergebnis/phpunit-slow-test-detector": "^2.19.1",
+                "fakerphp/faker": "^1.24.1",
+                "nette/di": "^3.1.10",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan-deprecation-rules": "^2.0.3",
+                "phpstan/phpstan-phpunit": "^2.0.7",
+                "phpstan/phpstan-strict-rules": "^2.0.6",
+                "phpunit/phpunit": "^9.6.21",
+                "psr/container": "^2.0.2",
+                "symfony/finder": "^5.4.45",
+                "symfony/process": "^5.4.47"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "rules.neon"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ergebnis\\PHPStan\\Rules\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com",
+                    "homepage": "https://localheinz.com"
+                }
+            ],
+            "description": "Provides rules for phpstan/phpstan.",
+            "homepage": "https://github.com/ergebnis/phpstan-rules",
+            "keywords": [
+                "PHPStan",
+                "phpstan-rules"
+            ],
+            "support": {
+                "issues": "https://github.com/ergebnis/phpstan-rules/issues",
+                "security": "https://github.com/ergebnis/phpstan-rules/blob/main/.github/SECURITY.md",
+                "source": "https://github.com/ergebnis/phpstan-rules"
+            },
+            "time": "2025-08-19T07:58:25+00:00"
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
