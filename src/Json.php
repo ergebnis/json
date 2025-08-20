@@ -21,7 +21,7 @@ final class Json
     private string $encoded;
 
     /**
-     * @var null|bool|float|int|list<mixed>|object|string
+     * @var null|array<int, mixed>|bool|float|int|object|string
      */
     private $decoded;
 
