@@ -33,6 +33,6 @@ return static function (Config\RectorConfig $rectorConfig): void {
     ]);
 
     $rectorConfig->sets([
-        PHPUnit\Set\PHPUnitSetList::PHPUNIT_90,
+        PHPUnit\Set\PHPUnitSetList::COMPOSER_BASED,
     ]);
 };
