@@ -1,9 +1,9 @@
 # json
 
-[![Integrate](https://github.com/ergebnis/json/workflows/Integrate/badge.svg)](https://github.com/ergebnis/json/actions)
-[![Merge](https://github.com/ergebnis/json/workflows/Merge/badge.svg)](https://github.com/ergebnis/json/actions)
-[![Release](https://github.com/ergebnis/json/workflows/Release/badge.svg)](https://github.com/ergebnis/json/actions)
-[![Renew](https://github.com/ergebnis/json/workflows/Renew/badge.svg)](https://github.com/ergebnis/json/actions)
+[![Integrate](https://github.com/ergebnis/json/actions/workflows/integrate.yaml/badge.svg?branch=main)](https://github.com/ergebnis/json/actions/workflows/integrate.yaml)
+[![Merge](https://github.com/ergebnis/json/actions/workflows/merge.yaml/badge.svg)](https://github.com/ergebnis/json/actions/workflows/merge.yaml)
+[![Release](https://github.com/ergebnis/json/actions/workflows/release.yaml/badge.svg)](https://github.com/ergebnis/json/actions/workflows/release.yaml)
+[![Renew](https://github.com/ergebnis/json/actions/workflows/renew.yaml/badge.svg)](https://github.com/ergebnis/json/actions/workflows/renew.yaml)
 
 [![Code Coverage](https://codecov.io/gh/ergebnis/json/branch/main/graph/badge.svg)](https://codecov.io/gh/ergebnis/json)
 
