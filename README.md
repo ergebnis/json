@@ -9,7 +9,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/ergebnis/json/v/stable)](https://packagist.org/packages/ergebnis/json)
 [![Total Downloads](https://poser.pugx.org/ergebnis/json/downloads)](https://packagist.org/packages/ergebnis/json)
-[![Monthly Downloads](http://poser.pugx.org/ergebnis/json/d/monthly)](https://packagist.org/packages/ergebnis/json)
+[![Monthly Downloads](https://poser.pugx.org/ergebnis/json/d/monthly)](https://packagist.org/packages/ergebnis/json)
 
 This project provides a [`composer`](https://getcomposer.org) package with a `Json` value object for representing a valid JSON `string`.
 
