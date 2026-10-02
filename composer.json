@@ -24,7 +24,7 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "ergebnis/data-provider": "^3.6.0",
+    "ergebnis/data-provider": "^3.7.0",
     "ergebnis/license": "^2.8.0",
     "ergebnis/php-cs-fixer-config": "^6.63.3",
     "ergebnis/phpstan-rules": "^2.14.0",
