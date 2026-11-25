@@ -32,9 +32,9 @@ final class JsonTest extends Framework\TestCase
     public function testFromStringThrowsWhenValueIsNotJson(): void
     {
         $encoded = <<<'TXT'
-{
-  "foo
-TXT;
+            {
+              "foo
+            TXT;
 
         $this->expectException(Exception\NotJson::class);
 
