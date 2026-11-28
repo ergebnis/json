@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Json\Test\Unit\Exception;
 
-use Ergebnis\Json\Exception;
-use Ergebnis\Json\Test;
+use Ergebnis\Json;
 use PHPUnit\Framework;
 
 /**
@@ -22,13 +21,13 @@ use PHPUnit\Framework;
  */
 final class NotJsonTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Json\Test\Util\Helper;
 
     public function testValueReturnsException(): void
     {
         $encoded = self::faker()->sentence();
 
-        $exception = Exception\NotJson::value($encoded);
+        $exception = Json\Exception\NotJson::value($encoded);
 
         $message = \sprintf(
             'Value "%s" is not a valid JSON string.',
