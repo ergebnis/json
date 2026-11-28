@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19787b9f9b411233abe17664384ce3aa",
+    "content-hash": "8c0254b4e714100e5b425a19d6356e4f",
     "packages": [],
     "packages-dev": [
         {
@@ -646,16 +646,16 @@
         },
         {
             "name": "ergebnis/phpstan-rules",
-            "version": "2.17.1",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/phpstan-rules.git",
-                "reference": "67c1bcd57666d30a3da0f744e4776c05178aa0c6"
+                "reference": "f8014018e83ee4afbe6a72a529622d1524749c7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/phpstan-rules/zipball/67c1bcd57666d30a3da0f744e4776c05178aa0c6",
-                "reference": "67c1bcd57666d30a3da0f744e4776c05178aa0c6",
+                "url": "https://api.github.com/repos/ergebnis/phpstan-rules/zipball/f8014018e83ee4afbe6a72a529622d1524749c7f",
+                "reference": "f8014018e83ee4afbe6a72a529622d1524749c7f",
                 "shasum": ""
             },
             "require": {
@@ -668,15 +668,15 @@
             "require-dev": {
                 "codeception/codeception": "^4.0.0 || ^5.0.0",
                 "doctrine/orm": "^2.20.0 || ^3.3.0",
-                "ergebnis/composer-normalize": "^2.56.0",
+                "ergebnis/composer-normalize": "^2.56.1",
                 "ergebnis/license": "^2.9.0",
-                "ergebnis/php-cs-fixer-config": "^6.64.1",
+                "ergebnis/php-cs-fixer-config": "^6.64.3",
                 "ergebnis/phpunit-slow-test-detector": "^2.27.0",
                 "ergebnis/rector-rules": "^1.19.0",
                 "fakerphp/faker": "^1.24.1",
                 "phpstan/extension-installer": "^1.4.3",
                 "phpstan/phpstan-deprecation-rules": "^2.0.5",
-                "phpstan/phpstan-phpunit": "^2.1.1",
+                "phpstan/phpstan-phpunit": "^2.1.2",
                 "phpstan/phpstan-strict-rules": "^2.1.1",
                 "phpunit/phpunit": "^9.6.33",
                 "psr/container": "^2.0.2",
@@ -692,7 +692,7 @@
                     ]
                 },
                 "branch-alias": {
-                    "dev-main": "2.17-dev"
+                    "dev-main": "2.18-dev"
                 }
             },
             "autoload": {
@@ -722,7 +722,7 @@
                 "security": "https://github.com/ergebnis/phpstan-rules/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/phpstan-rules"
             },
-            "time": "2026-11-10T09:41:01+00:00"
+            "time": "2026-11-19T13:18:51+00:00"
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
@@ -872,36 +872,36 @@
         },
         {
             "name": "ergebnis/version",
-            "version": "1.5.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/version.git",
-                "reference": "d24af41aa88e24c24e705816e428668de2b7391a"
+                "reference": "50248d5807da66eabd856ba1ac829c0c93bc5eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/version/zipball/d24af41aa88e24c24e705816e428668de2b7391a",
-                "reference": "d24af41aa88e24c24e705816e428668de2b7391a",
+                "url": "https://api.github.com/repos/ergebnis/version/zipball/50248d5807da66eabd856ba1ac829c0c93bc5eaf",
+                "reference": "50248d5807da66eabd856ba1ac829c0c93bc5eaf",
                 "shasum": ""
             },
             "require": {
-                "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0 || ~8.6.0"
+                "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0 || ~8.6.0 || ~8.7.0"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.54.0",
-                "ergebnis/data-provider": "^3.7.0",
-                "ergebnis/license": "^2.8.0",
-                "ergebnis/php-cs-fixer-config": "^6.64.1",
+                "ergebnis/composer-normalize": "^2.57.0",
+                "ergebnis/data-provider": "^3.7.1",
+                "ergebnis/license": "^2.9.0",
+                "ergebnis/php-cs-fixer-config": "^6.65.0",
                 "ergebnis/phpunit-slow-test-detector": "^2.27.0",
-                "ergebnis/rector-rules": "^1.18.5",
+                "ergebnis/rector-rules": "^1.19.0",
                 "ext-bcmath": "*",
                 "fakerphp/faker": "^1.24.1",
                 "infection/infection": "~0.26.6",
                 "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^2.2.14",
-                "phpstan/phpstan-deprecation-rules": "^2.0.5",
-                "phpstan/phpstan-phpunit": "^2.1.1",
-                "phpstan/phpstan-strict-rules": "^2.1.0",
+                "phpstan/phpstan": "^2.3.2",
+                "phpstan/phpstan-deprecation-rules": "^2.0.6",
+                "phpstan/phpstan-phpunit": "^2.1.3",
+                "phpstan/phpstan-strict-rules": "^2.1.2",
                 "phpunit/phpunit": "^9.6.33",
                 "rector/rector": "^2.7.0"
             },
@@ -911,7 +911,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.5-dev"
+                    "dev-main": "1.8-dev"
                 },
                 "composer-normalize": {
                     "indent-size": 2,
@@ -945,7 +945,7 @@
                 "security": "https://github.com/ergebnis/version/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/version"
             },
-            "time": "2026-10-31T19:24:09+00:00"
+            "time": "2026-11-25T08:56:23+00:00"
         },
         {
             "name": "erickskrauch/php-cs-fixer-custom-fixers",
