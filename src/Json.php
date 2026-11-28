@@ -43,7 +43,7 @@ final class Json
     {
         try {
             $decoded = self::decode($encoded);
-        } catch (\JsonException $exception) {
+        } catch (\JsonException $jsonException) {
             throw Exception\NotJson::value($encoded);
         }
 
@@ -72,7 +72,7 @@ final class Json
 
         try {
             $decoded = self::decode($encoded);
-        } catch (\JsonException $exception) {
+        } catch (\JsonException $jsonException) {
             throw Exception\FileDoesNotContainJson::file($file);
         }
 

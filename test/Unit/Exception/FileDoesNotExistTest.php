@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Json\Test\Unit\Exception;
 
-use Ergebnis\Json\Exception;
-use Ergebnis\Json\Test;
+use Ergebnis\Json;
 use PHPUnit\Framework;
 
 /**
@@ -22,13 +21,13 @@ use PHPUnit\Framework;
  */
 final class FileDoesNotExistTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Json\Test\Util\Helper;
 
     public function testFileReturnsException(): void
     {
         $name = __FILE__;
 
-        $exception = Exception\FileDoesNotExist::file($name);
+        $exception = Json\Exception\FileDoesNotExist::file($name);
 
         $expected = \sprintf(
             'File "%s" does not exist.',

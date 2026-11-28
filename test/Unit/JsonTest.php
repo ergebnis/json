@@ -13,9 +13,7 @@ declare(strict_types=1);
 
 namespace Ergebnis\Json\Test\Unit;
 
-use Ergebnis\Json\Exception;
-use Ergebnis\Json\Json;
-use Ergebnis\Json\Test;
+use Ergebnis\Json;
 use PHPUnit\Framework;
 
 /**
@@ -27,7 +25,7 @@ use PHPUnit\Framework;
  */
 final class JsonTest extends Framework\TestCase
 {
-    use Test\Util\Helper;
+    use Json\Test\Util\Helper;
 
     public function testFromStringThrowsWhenValueIsNotJson(): void
     {
@@ -36,9 +34,9 @@ final class JsonTest extends Framework\TestCase
               "foo
             TXT;
 
-        $this->expectException(Exception\NotJson::class);
+        $this->expectException(Json\Exception\NotJson::class);
 
-        Json::fromString($encoded);
+        Json\Json::fromString($encoded);
     }
 
     /**
@@ -46,7 +44,7 @@ final class JsonTest extends Framework\TestCase
      */
     public function testFromStringReturnsJsonWhenValueIsValidJson(string $encoded): void
     {
-        $json = Json::fromString($encoded);
+        $json = Json\Json::fromString($encoded);
 
         self::assertSame($encoded, $json->toString());
         self::assertSame($encoded, $json->encoded());
@@ -65,27 +63,27 @@ final class JsonTest extends Framework\TestCase
     {
         $file = __DIR__ . '/../Fixture/Json/does-not-exist.json';
 
-        $this->expectException(Exception\FileDoesNotExist::class);
+        $this->expectException(Json\Exception\FileDoesNotExist::class);
 
-        Json::fromFile($file);
+        Json\Json::fromFile($file);
     }
 
     public function testFromFileThrowsWhenFileIsADirectory(): void
     {
         $file = __DIR__ . '/../Fixture/Json';
 
-        $this->expectException(Exception\FileDoesNotExist::class);
+        $this->expectException(Json\Exception\FileDoesNotExist::class);
 
-        Json::fromFile($file);
+        Json\Json::fromFile($file);
     }
 
     public function testFromFileThrowsWhenFileDoesNotContainValidJson(): void
     {
         $file = __DIR__ . '/../Fixture/Json/not-valid/object.json';
 
-        $this->expectException(Exception\FileDoesNotContainJson::class);
+        $this->expectException(Json\Exception\FileDoesNotContainJson::class);
 
-        Json::fromFile($file);
+        Json\Json::fromFile($file);
     }
 
     /**
@@ -93,7 +91,7 @@ final class JsonTest extends Framework\TestCase
      */
     public function testFromFileReturnsJsonWhenFileContainsValidJson(string $file): void
     {
-        $json = Json::fromFile($file);
+        $json = Json\Json::fromFile($file);
 
         self::assertStringEqualsFile($file, $json->toString());
         self::assertStringEqualsFile($file, $json->encoded());
